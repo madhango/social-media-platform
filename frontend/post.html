@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Shared Post</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Shared Post</h1>
+
+<div id="post"></div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get("id");
+
+fetch("http://localhost:5000/posts/" + id)
+
+.then(res => res.json())
+
+.then(post => {
+
+document.getElementById("post").innerHTML = `
+
+<div class="post">
+
+<h3>${post.username}</h3>
+
+<p>${post.content}</p>
+
+<p><b>Tags:</b> ${post.tags.join(", ")}</p>
+
+${post.image ? `<img src="http://localhost:5000/uploads/${post.image}" width="200">` : ""}
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+
+</html>
