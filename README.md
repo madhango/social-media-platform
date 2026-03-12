@@ -2,7 +2,7 @@
 
 This project is a **basic social media web application** 
 
-The application allows users to create posts, upload images, tag posts, like posts, comment on posts, and share posts.
+This application allows users to create posts, upload images, tag posts, like posts, comment on posts, and share posts.
 It demonstrates full-stack development using **Node.js, Express.js, MongoDB, and Vanilla JavaScript**.
 
 ---
@@ -92,7 +92,7 @@ social-media-platform
 ### 1️⃣ Clone the Repository
 
 ```
-git clone https://github.com/your-username/social-media-platform.git
+git clone https://github.com/madhango/social-media-platform.git
 ```
 
 ### 2️⃣ Navigate to Backend Folder
